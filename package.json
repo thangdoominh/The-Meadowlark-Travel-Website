@@ -1,0 +1,25 @@
+{
+  "name": "meadownlark",
+  "version": "1.0.0",
+  "description": "The-Meadowlark-Travel-Website",
+  "main": "meadowlark",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dominhthang1999/The-Meadowlark-Travel-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dominhthang1999/The-Meadowlark-Travel-Website/issues"
+  },
+  "homepage": "https://github.com/dominhthang1999/The-Meadowlark-Travel-Website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "express3-handlebars": "^0.5.2",
+    "nodemon": "^2.0.12"
+  }
+}
