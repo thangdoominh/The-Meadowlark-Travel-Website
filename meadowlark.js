@@ -7,6 +7,12 @@ var fortune = require("./lib/fortune")
 // Declare static middleware
 app.use(express.static(__dirname + "/public"))
 
+app.use((req, res, next) => {
+    res.locals.showTests =
+        app.get("env") !== "production" && req.query.test === "1"
+    next()
+})
+
 // Set up handlebars view engine
 var handlesbars = require("express-handlebars").create({
     defaultLayout: "main",
@@ -21,7 +27,10 @@ app.get("/", (req, res) => {
 })
 
 app.get("/about", (req, res) => {
-    res.render("about", { fortune: fortune.getFortune() })
+    res.render("about", {
+        fortune: fortune.getFortune(),
+        pageTestScript: "/qa/tests-about.js",
+    })
 })
 
 // Custom 404 page
